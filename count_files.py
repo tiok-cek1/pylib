@@ -10,4 +10,4 @@ if len(sys.argv) > 2:
     suffix = sys.argv[2]
     
 files = util.io.ls(path, suffix)
-print(len(files)) 
+print((len(files))) 

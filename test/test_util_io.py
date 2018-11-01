@@ -10,7 +10,7 @@ def test_readlines():
     p = __file__
     lines = read_lines(p)
     for l in lines:
-        print l    
+        print(l)    
 
 @util.dec.print_test
 def test_write_lines():
@@ -26,10 +26,10 @@ def test_mat_io():
     util.io.dump_mat(path, {'a': 1,'b': 2,'c': 3,'d': np.ones((3, 3))})   
     data =  util.io.load_mat(path)
     for c in data:
-        print data[c]
+        print(data[c])
       
     vs = util.io.dir_mat(path)
-    print vs
+    print(vs)
 #test_ls()
 #test_readlines()
 #test_write_lines()

@@ -10,29 +10,29 @@ def test_to_lowercase():
 
 @util.dec.print_test
 def test_endswith():
-    np.testing.assert_(util.str.ends_with('hello.ss', 'ss'))
-    np.testing.assert_(util.str.ends_with('hello.ss', '.SS', ignore_case = True))
-    np.testing.assert_(util.str.ends_with('hello.ss', ['ss', 'SS']))
+    np.testing.assertTrue(util.str.ends_with('hello.ss', 'ss'))
+    np.testing.assertTrue(util.str.ends_with('hello.ss', '.SS', ignore_case = True))
+    np.testing.assertTrue(util.str.ends_with('hello.ss', ['ss', 'SS']))
 
 @util.dec.print_test
 def test_startswith():
-    np.testing.assert_(util.str.starts_with('hello.ss', 'he'))
-    np.testing.assert_(util.str.starts_with('hello.ss', 'HeL', ignore_case = True))
-    np.testing.assert_(util.str.starts_with('hello.ss', ['h', 'SS']))
+    np.testing.assertTrue(util.str.starts_with('hello.ss', 'he'))
+    np.testing.assertTrue(util.str.starts_with('hello.ss', 'HeL', ignore_case = True))
+    np.testing.assertTrue(util.str.starts_with('hello.ss', ['h', 'SS']))
 
     
 @util.dec.print_test
 def test_is_str():
-    np.testing.assert_(util.str.is_str(''))
-    np.testing.assert_(not util.str.is_str([]))
-    np.testing.assert_(not util.str.is_str(0))
+    np.testing.assertTrue(util.str.is_str(''))
+    np.testing.assertTrue(not util.str.is_str([]))
+    np.testing.assertTrue(not util.str.is_str(0))
 
 @util.dec.print_test
 def test_contains():
     s = 'This is China'
     target = 'this'
-    np.testing.assert_(not util.str.contains(s, target, ignore_case = False))
-    np.testing.assert_(util.str.contains(s, target, ignore_case = True))
+    np.testing.assertTrue(not util.str.contains(s, target, ignore_case = False))
+    np.testing.assertTrue(util.str.contains(s, target, ignore_case = True))
 
 
 def test_replace_all():

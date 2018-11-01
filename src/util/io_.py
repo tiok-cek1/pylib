@@ -9,7 +9,7 @@ In the style of linux shell commands
 '''
 import os
 try:
-    import cPickle as pkl
+    import pickle as pkl
 except:
     import pickle as pkl
 import logging

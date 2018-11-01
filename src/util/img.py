@@ -2,7 +2,7 @@
 '''
 @author: dengdan
 '''
-from __future__ import absolute_import
+
 
 from . import log
 try:
@@ -188,7 +188,7 @@ def get_contour_region_in_rect(img, contour):
 
 def get_contour_min_area_box(contour):
     rect = cv2.minAreaRect(contour)
-    box = cv2.cv.BoxPoints(rect)
+    box = cv2.boxPoints(rect)
     box = np.int0(box)
     return box
 
@@ -196,7 +196,7 @@ def get_contour_region_in_min_area_rect(img, cnt):
     # find the min area rect of contour
     rect = cv2.minAreaRect(cnt)
     angle = rect[-1]
-    box = cv2.cv.BoxPoints(rect)
+    box = cv2.boxPoints(rect)
     box_cnt = points_to_contour(box)
     
     # find the rectangle containing box_cnt, and set it as ROI
@@ -525,8 +525,8 @@ def min_area_rect(xs, ys):
         
     num_rects = xs.shape[0]
     box = np.empty((num_rects, 5))#cx, cy, w, h, theta
-    for idx in xrange(num_rects):
-        points = zip(xs[idx, :], ys[idx, :])
+    for idx in range(num_rects):
+        points = list(zip(xs[idx, :], ys[idx, :]))
         cnt = points_to_contour(points)
         rect = cv2.minAreaRect(cnt)
         cx, cy = rect[0]

@@ -28,7 +28,7 @@ def kill(pid):
     elif type(pid) == int:
         cmd = 'kill -9 %d'%(pid)
         util.log.info(cmd)
-        print(util.cmd.cmd(cmd))
+        print((util.cmd.cmd(cmd)))
     elif type(pid) == str:
         pids = get_pid(pid)
         kill(pids)

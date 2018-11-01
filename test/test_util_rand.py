@@ -15,15 +15,15 @@ def test_normal():
 @util.dec.print_test
 def test_randint():
 #    logging.info('generating random int:%d'%(util.rand.randint()))
-    print util.rand.randint()
-    print util.rand.randint(10)
-    print util.rand.randint(shape = (2, 3))
+    print(util.rand.randint())
+    print(util.rand.randint(10))
+    print(util.rand.randint(shape = (2, 3)))
     
 @util.dec.print_test
 def test_sample():
-    lst = range(1000)
+    lst = list(range(1000))
     n = 20
-    samples = util.rand.sample(zip(lst, lst), n)
+    samples = util.rand.sample(list(zip(lst, lst)), n)
     util.test.assert_equal(len(samples), n)
 
 #test_randint()

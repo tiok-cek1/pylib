@@ -13,7 +13,7 @@ for view_idx, view_dir in enumerate(view_dirs):
         ts = get_ts(image_name)
         image_dict[ts].append(view_dir + "/" + image_name)
 
-timestamps = image_dict.keys();
+timestamps = list(image_dict.keys());
 timestamps.sort();
 view_names = [util.io.get_filename(name) for name in view_dirs]
 output_dir = "~/temp/no-use/" + util.str.join(view_names, "+");

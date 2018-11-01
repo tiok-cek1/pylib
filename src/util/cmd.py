@@ -2,8 +2,8 @@
 
 def cmd(cmd):
     try:
-        import  commands
-        return commands.getoutput(cmd)
+        import  subprocess
+        return subprocess.getoutput(cmd)
     except:
         import subprocess
         return subprocess.check_output(cmd, shell = True)

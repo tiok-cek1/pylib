@@ -13,7 +13,7 @@ def download(url, path):
       path, _ = urllib.request.urlretrieve(url, path, _progress)
       print()
       statinfo = os.stat(path)
-      print('Successfully downloaded', filename, statinfo.st_size, 'bytes.')
+      print(('Successfully downloaded', filename, statinfo.st_size, 'bytes.'))
     
     
 def mdownload(urls, paths, pool_size = 4):

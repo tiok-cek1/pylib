@@ -76,7 +76,7 @@ def test_norm():
 def test_empty_list():
     l = util.np.empty_list(3, list)
     l[0].append(1)
-    np.testing.assert_(l[0] is not l[1])    
+    np.testing.assertTrue(l[0] is not l[1])    
 
 
 

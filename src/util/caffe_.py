@@ -46,10 +46,10 @@ def draw_log(log_path, output_names, show = False, save_path = None, from_to = N
                     if name not in outputs:
                         outputs[name] = []
                     util.log.info(line)
-                    print( '\t', iter_num, name, output)
+                    print(( '\t', iter_num, name, output))
                     outputs[name].append(output)
     if len(outputs)==0:
-        print('No output named:', output_names)
+        print(('No output named:', output_names))
         return    
     for name in outputs:
         output = outputs[name]

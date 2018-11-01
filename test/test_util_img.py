@@ -59,7 +59,7 @@ def _test_resize():
     util.test.assert_equal(util.img.get_shape(img1), 0.5 * size)
 
     img2 = util.img.resize(img, fx = 0.1, fy = 1)
-    print util.img.get_wh(img2), (0.1 * size[0], size[1])
+    print(util.img.get_wh(img2), (0.1 * size[0], size[1]))
     util.test.assert_equal(util.img.get_wh(img2), (0.1 * size[0], size[1]))
 
     img3 = util.img.resize(img, size = (300, 400))
@@ -121,7 +121,7 @@ def _test_rect_iou():
     rects1 = [[10, 30, 60, 80], [35, 5, 85, 55], [90, 90, 95, 95]]
     rects2 = [[10, 30, 60, 80], [35, 5, 85, 55]]
     iou_matrix = util.img.get_rect_iou(rects1, rects2)
-    print iou_matrix
+    print(iou_matrix)
     
     
 @util.dec.print_test
