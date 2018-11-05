@@ -112,7 +112,7 @@ def find_files(pattern):
 def read_lines(p):
     """return the text in a file in lines as a list """
     p = get_absolute_path(p)
-    f = open(p,'rU')
+    f = open(p,'r',encoding='utf-8')
     return f.readlines()
     
 def write_lines(p, lines, append_break = False):
